@@ -1,0 +1,22 @@
+<div class='container'>
+  <h1>Find your park</h1>
+  <div class='form-group'>
+    <%= form_tag('/parks', method: :get) do  %>
+      <%= text_field_tag 'name', nil, placeholder: 'Enter park name' %>
+      <%# text_field_tag 'address' %>
+      <%= submit_tag 'Get Info', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+
+  <% @parks.each do |park| %>
+    <%# park.inspect %>
+    <h2>Name:</h2>
+    <%= park["name"] %>
+    <h2>Location:</h2>
+    <%= park["address"] %>
+    <%# park["location"] %>
+    <%# park["location"]["coordinates"].first %>
+    <h2>Features:</h2>
+    <%= render_features_for(park) %>
+  <% end %>
+</div>
