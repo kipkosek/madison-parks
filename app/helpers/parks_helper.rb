@@ -1,12 +1,11 @@
 module ParksHelper
-  def render_features_for(park)
+  def render_facilities_for(park)
     output = "<table class='table'>"
-    features = [
-      {query: 'baseball', display_name: 'Baseball'},
-      {query: 'b_cycle_station', display_name: 'Bike Racks'}
-    ]
-    features.each do |feature|
-      output += "<tr><td>#{feature[:display_name]}?</td><td>#{ParkQuery.has_feature?(park, feature[:query])}</td></tr>"
+
+    ParkQuery::FACILITY_NAMES.each do |facility|
+      if ParkQuery.has_facility?(park, facility[:query])
+        output += "<tr><td>#{facility[:display_name]}?</td></tr>"
+      end
     end
     output += "</table>"
     output.html_safe
