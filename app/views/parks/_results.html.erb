@@ -1,0 +1,15 @@
+<% if @parks.blank? %>
+  <h4>No results.</h4>
+<% else %>
+  <% @parks.each do |park| %>
+    <%# park.inspect %>
+    <h2>Name:</h2>
+    <%= park["name"] %>
+    <h2>Location:</h2>
+    <%= park["address"] %>
+    <%# park["location"] %>
+    <%# park["location"]["coordinates"].first %>
+    <h2>Facilities:</h2>
+    <%= render_facilities_for(park) %>
+  <% end %>
+<% end %>

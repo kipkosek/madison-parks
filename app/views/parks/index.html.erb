@@ -1,6 +1,6 @@
 <div class='container'>
   <h1>Find your park by name</h1>
-    <%= form_tag('/parks', method: :get) do  %>
+    <%= form_tag('/parks', method: :get, remote: true) do  %>
       <%= text_field_tag 'name', nil, class: "input-lg col-md-4", placeholder: 'Enter park name' %>
       <%# text_field_tag 'address' %>
       <%= submit_tag 'Search', class: 'btn-lg btn-primary' %>
@@ -10,21 +10,7 @@
       <%= submit_tag 'Search', class: 'btn-lg btn-primary' %>
     <% end %>
 
-  <div class="park-info">
-    <% if @parks.blank? %>
-      <h4>No results.</h4>
-    <% else %>
-      <% @parks.each do |park| %>
-        <%# park.inspect %>
-        <h2>Name:</h2>
-        <%= park["name"] %>
-        <h2>Location:</h2>
-        <%= park["address"] %>
-        <%# park["location"] %>
-        <%# park["location"]["coordinates"].first %>
-        <h2>Facilities:</h2>
-        <%= render_facilities_for(park) %>
-      <% end %>
-    <% end %>
+  <div class='park-results'>
+    <%# render partial: 'results' %>
   </div>
 </div>

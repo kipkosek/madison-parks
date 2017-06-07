@@ -10,13 +10,18 @@ class ParksController < ApplicationController
     if name
       @parks = park_request.get_park(name)
     elsif facility
-      # Rails.logger.info(">>>>>>>>>> #{facility.inspect}")
+      Rails.logger.info(">>>>>>>>>> #{facility.inspect}")
       query = ParkQuery.get_facility_name_by_display_name(facility)
       if query
         @parks = park_request.get_parks_with_facility(query)
       end
     else
       @parks = []
+    end
+
+    respond_to do |format|
+      format.html {render :index}
+      format.js
     end
   end
 

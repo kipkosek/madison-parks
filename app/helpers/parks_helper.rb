@@ -4,7 +4,7 @@ module ParksHelper
 
     ParkQuery::FACILITY_NAMES.each do |facility|
       if ParkQuery.has_facility?(park, facility[:query])
-        output += "<tr><td>#{facility[:display_name]}?</td></tr>"
+        output += "<tr><td>#{facility[:display_name]}</td></tr>"
       end
     end
     output += "</table>"
