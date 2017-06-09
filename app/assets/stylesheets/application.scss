@@ -29,3 +29,12 @@
   //  color: rgb(5, 56, 107);
   //  font-family: Georgia, serif;
  }
+
+ .facilities-list {
+   column-count: 3;
+   column-gap: normal;
+   column-width: 60px;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+ }
