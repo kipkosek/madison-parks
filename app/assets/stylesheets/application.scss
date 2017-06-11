@@ -21,9 +21,15 @@
    background-color: rgb(237, 245, 225);
  }
 
- .btn-lg {
+ .btn-search {
    margin-left: 15px;
  }
+
+.btn-reset {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
 
  .park-info {
   //  color: rgb(5, 56, 107);

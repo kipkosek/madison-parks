@@ -3,8 +3,6 @@ class ParksController < ApplicationController
 
   def index
     name = params[:name].split.map(&:capitalize).join(' ') unless params[:name].blank?
-    # address = params[:address] || ""
-    # parameter_hash = { name: name, address: address}
     facility = params[:facility].downcase unless params[:facility].blank?
     park_request = ParkQuery.new
     if name
@@ -16,7 +14,7 @@ class ParksController < ApplicationController
           @parks = park_request.get_parks_with_facility(query)
         rescue
           @parks = []
-          @error = "There was a server problem."
+          @error = "There was an error finding parks with that activity."
         end
       end
     else

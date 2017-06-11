@@ -4,19 +4,19 @@ class ParkQuery
   FACILITY_NAMES = [
     {query: 'baseball', display_name: 'baseball'},
     {query: 'basketball', display_name: 'basketball'},
-    {query: 'b-cycle_station', display_name: 'bike racks'},
+    {query: 'b_cycle_station', display_name: 'bike racks'},
     {query: 'beach', display_name: 'beach'},
     {query: 'boat_launch', display_name: 'boat launch'},
     {query: 'boat_mooring', display_name: 'boat mooring'},
     {query: 'boat_mooring', display_name: 'boating'},
     {query: 'botanical_gardens', display_name: 'botanical gardens'},
-    {query: 'canoe/kayak_launch', display_name: 'canoe kayak launch'},
+    {query: 'canoe_kayak_launch', display_name: 'canoe kayak launch'},
     {query: 'canoe_kayak_storage', display_name: 'canoe kayak storage'},
     {query: 'canoe_kayak_rental', display_name: 'canoe kayak rental'},
     {query: 'cricket', display_name: 'cricket'},
     {query: 'disc_golf', display_name: 'disc golf'},
-    {query: 'dog off-leash park', display_name: 'dogs'},
-    {query: 'dog on-leash area', display_name: 'dogs'},
+    {query: 'dog_off_leash_park', display_name: 'dogs'},
+    {query: 'dog_on_leash_area', display_name: 'dogs'},
     {query: 'drinking_fountain', display_name: 'drinking fountain'},
     {query: 'fireplace', display_name: 'fireplace'},
     {query: 'football', display_name: 'football'},
@@ -42,7 +42,7 @@ class ParkQuery
     {query: 'snowshoeing', display_name: 'snowshoeing'},
     {query: 'soccer', display_name: 'soccer'},
     {query: 'softball', display_name: 'softball'},
-    {query: 'splash_park', display_name: 'splash park'},
+    {query: 'spray_park', display_name: 'spray park'},
     {query: 'tennis', display_name: 'tennis'},
     {query: 'ultimate_frisbee', display_name: 'ultimate frisbee'},
     {query: 'volleyball', display_name: 'volleyball'}
@@ -57,7 +57,7 @@ class ParkQuery
   end
 
   def get_parks_with_facility(facility)
-    client.get("x4ks-m4xg", { :$limit => 50, "$select" => "*", "$where" => "#{facility}=true" })
+    client.get("x4ks-m4xg", { :$limit => 150, "$select" => "*", "$where" => "#{facility}=true" })
   end
 
   def self.has_facility?(park, facility)

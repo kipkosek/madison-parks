@@ -1,15 +1,15 @@
 <div class='container'>
-  <h1>Find your park by name</h1>
+  <h1>Explore Madison's Parks!<h1>
+  <h2>Find your park by name</h2>
     <%= form_tag('/parks', method: :get, remote: true) do  %>
       <%= text_field_tag 'name', nil, class: "input-lg col-md-4", placeholder: 'Enter park name' %>
-      <%# text_field_tag 'address' %>
-      <%= submit_tag 'Search', class: 'btn-lg btn-primary' %>
-  <h1>Or . . . </h1>
-  <h1>Choose an activity (like baseball or hiking)</h1>
+      <%= submit_tag 'Search', class: 'btn-lg btn-primary btn-search' %>
+  <h2>Or . . . </h2>
+  <h2>Choose an activity (like baseball or hiking)</h2>
       <%= text_field_tag 'facility', nil, class: "input-lg col-md-4", placeholder: 'Enter activity' %>
-      <%= submit_tag 'Search', class: 'btn-lg btn-primary' %>
+      <%= submit_tag 'Search', class: 'btn-lg btn-primary btn-search' %>
+      <%= button_tag 'Clear Form', type: 'reset', class: 'btn-lg btn-info btn-reset' %>
     <% end %>
-
   <div class='park-results'>
     <%# render partial: 'results' %>
   </div>
