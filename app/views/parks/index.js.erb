@@ -1,1 +1,7 @@
+$('.btn-search').click(function() {
+  $('body').animate({
+    scrollTop: $('#features').offset().top
+  }, 1000);
+});
+
 $('.park-results').html("<%= escape_javascript( render partial: 'results' ) %>");

@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>MadisonParks</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Lato' %>
+    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900' %>
+    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Muli' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">Madison Parks</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll" href="#download">Search</a>
+                </li>
+                <!-- <li>
+                    <a class="page-scroll" href="#features">Features</a>
+                </li> -->
+                <li>
+                    <a class="page-scroll" href="#contact">About</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
     <%= yield %>
+
+    <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js' %>
   </body>
 </html>
