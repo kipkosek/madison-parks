@@ -1,16 +1,63 @@
-<div class='container'>
-  <h1>Explore Madison's Parks!<h1>
-  <h2>Find your park by name</h2>
-    <%= form_tag('/parks', method: :get, remote: true) do  %>
-      <%= text_field_tag 'name', nil, class: "input-lg col-md-4", placeholder: 'Enter park name' %>
-      <%= submit_tag 'Search', class: 'btn-lg btn-primary btn-search' %>
-  <h2>Or . . . </h2>
-  <h2>Choose an activity (like baseball or hiking)</h2>
-      <%= text_field_tag 'facility', nil, class: "input-lg col-md-4", placeholder: 'Enter activity' %>
-      <%= submit_tag 'Search', class: 'btn-lg btn-primary btn-search' %>
-      <%= button_tag 'Clear Form', type: 'reset', class: 'btn-lg btn-info btn-reset' %>
-    <% end %>
-  <div class='park-results'>
-    <%# render partial: 'results' %>
+<header>
+  <div class='container'>
+    <div class='row'>
+      <div class="col-sm-7">
+        <div class="header-content">
+          <div class="header-content-inner">
+            <h1>Explore Madison's Parks!<h1>
+            <h2>Find your park by name</h2>
+              <%= form_tag('/parks', method: :get, remote: true) do  %>
+              <div class='form-inline'>
+                <%= text_field_tag 'name', nil, class: "form-control input-lg", placeholder: 'Enter park name' %>
+                <%= submit_tag 'Search', class: 'btn-lg btn-primary btn-search' %>
+              </div>
+            <h2>Or . . . </h2>
+            <h2>Choose an activity (like baseball or hiking)</h2>
+              <div class='form-inline'>
+                <%= text_field_tag 'facility', nil, class: "form-control input-lg", placeholder: 'Enter activity' %>
+                <%= submit_tag 'Search', class: 'btn-lg btn-primary btn-search' %>
+              </div>
+                <%= button_tag 'Clear Form', type: 'reset', class: 'btn-lg btn-info btn-reset' %>
+              <% end %>
+          </div>
+        </div>
+      </div>
+
+      <!-- This is where a tree or other image would go -->
+      <!-- <div class="col-sm-5">
+        <div class="device-container">
+          <div class="device-mockup iphone6_plus portrait white">
+            <div class="device">
+              <div class="screen"> -->
+                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                <!-- <img src="img/demo-screen-1.jpg" class="img-responsive" alt="">
+              </div>
+              <div class="button"> -->
+                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+              <!-- </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
   </div>
-</div>
+</header>
+
+<section id="results" class="results">
+  <div class="container">
+    <div class='park-results'>
+      <%# render partial: 'results' %>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about bg-primary">
+  <div class="container">
+    <h2>Thanks for visiting!</h2>
+    <p>This site was created by
+      <a href='http://www.josephkipkosek.com' target='_blank'>Kip Kosek.</a></p>
+    <p>It is not affiliated with the outstanding <a href='http://www.cityofmadison.com/parks/' target='_blank'>City of Madison Parks Division.</a></p>
+    <p>You can view the source code and more details on <a href='https://github.com/kipkosek/madison-parks' target='_blank'>GitHub</a>.<p>
+  </div>
+</section>

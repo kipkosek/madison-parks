@@ -37,6 +37,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap-sass'
 gem 'figaro'
+gem 'font-awesome-rails'
+gem 'simple-line-icons-rails'
 gem 'soda-ruby', :require => 'soda'
 
 group :development, :test do
