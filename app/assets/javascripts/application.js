@@ -16,3 +16,10 @@
 //= require js/new-age
 //= require turbolinks
 //= require_tree .
+$(document).ready(function() {
+  $('.btn-search').on('click', function() {
+    $('body').animate({
+      scrollTop: $('#results').offset().top
+    }, 1000);
+  });
+});

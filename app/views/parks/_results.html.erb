@@ -4,16 +4,16 @@
       <h2><%= @error %></h2>
     <% else %>
       <% if @parks.blank? %>
-        <h2>No results</h2>
+        <h3>No results</h3>
       <% else %>
-        <h2><%= pluralize(@parks.count, 'result') %></h2>
+        <h3><%= pluralize(@parks.count, 'result') %></h3>
   </div>
 <div>
 
   <div class="container-fluid">
           <% @parks.each do |park| %>
           <div class='row'>
-            <div class='feature-item'>
+            <div class='result-item'>
               <h2 class='text-primary'><%= park["name"] %></h2>
               <h4 class='text-primary'><%= park["address"] %></h4>
               <!-- <h3>Activities:</h3> -->

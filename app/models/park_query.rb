@@ -7,6 +7,7 @@ class ParkQuery
     {query: 'b_cycle_station', display_name: 'bike racks'},
     {query: 'beach', display_name: 'beach'},
     {query: 'boat_launch', display_name: 'boat launch'},
+    {query: 'boat_launch', display_name: 'boating'},
     {query: 'boat_mooring', display_name: 'boat mooring'},
     {query: 'boat_mooring', display_name: 'boating'},
     {query: 'botanical_gardens', display_name: 'botanical gardens'},
@@ -15,8 +16,8 @@ class ParkQuery
     {query: 'canoe_kayak_rental', display_name: 'canoe kayak rental'},
     {query: 'cricket', display_name: 'cricket'},
     {query: 'disc_golf', display_name: 'disc golf'},
-    {query: 'dog_off_leash_park', display_name: 'dogs'},
-    {query: 'dog_on_leash_area', display_name: 'dogs'},
+    {query: 'dog_off_leash_park', display_name: 'dog walking'},
+    {query: 'dog_on_leash_area', display_name: 'dog walking'},
     {query: 'drinking_fountain', display_name: 'drinking fountain'},
     {query: 'fireplace', display_name: 'fireplace'},
     {query: 'football', display_name: 'football'},
@@ -57,7 +58,7 @@ class ParkQuery
   end
 
   def get_parks_with_facility(facility)
-    client.get("x4ks-m4xg", { :$limit => 150, "$select" => "*", "$where" => "#{facility}=true" })
+    client.get("x4ks-m4xg", { :$limit => 200, "$select" => "*", "$where" => "#{facility}=true" })
   end
 
   def self.has_facility?(park, facility)
