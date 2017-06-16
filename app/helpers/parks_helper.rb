@@ -1,6 +1,6 @@
 module ParksHelper
   def render_facilities_for(park)
-    output = "<ul class='facilities-list'>"
+    output = "<ul class='facilities-list text-center'>"
 
     display_array = []
     ParkQuery::FACILITY_NAMES.each do |facility|
@@ -9,7 +9,7 @@ module ParksHelper
       end
     end
     display_array.uniq.each do |name|
-      output += "<li><p>#{name}</p></li>"
+      output += "<li class='facility-item'><p>#{name}</p></li>"
     end
     output += "</ul>"
     output.html_safe
