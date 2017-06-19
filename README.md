@@ -18,5 +18,8 @@ The app is easy to use. Users enter the name of a park or an activity (like base
 
 In the future, I plan to add an autocomplete feature to make the activities search more accurate. I will also include geolocation data that will allow address searches and display maps.
 
+You can try the app here:<br />
+https://madcityparks.herokuapp.com/
+
 ## By the way . . .
 This is a personal project and not affiliated with the Madison city government. Please visit Madison's [Parks Division](http://www.cityofmadison.com/parks/) for official park information.
