@@ -4,6 +4,10 @@
 
 ![Screenshot_Search_Page](app/assets/images/Madison_Parks_Bootstrap_1.png)
 
+## Try it<br />
+#### https://madcityparks.herokuapp.com/
+
+
 ## Why I built it
 * I am interested in how technology can improve our civic life. So I wanted to do a project that took advantage of freely available public data. It turns out that the city of Madison has easy-to-use data sets accessible via the Socrata API. Take a look at the city's [data website](https://data.cityofmadison.com/) if you're interested. It's much more than parks!
 
@@ -17,9 +21,6 @@
 The app is easy to use. Users enter the name of a park or an activity (like baseball or hiking). The app returns a list of parks matching that input.
 
 In the future, I plan to add an autocomplete feature to make the activities search more accurate. I will also include geolocation data that will allow address searches and display maps.
-
-You can try the app here:<br />
-https://madcityparks.herokuapp.com/
 
 ## By the way . . .
 This is a personal project and not affiliated with the Madison city government. Please visit Madison's [Parks Division](http://www.cityofmadison.com/parks/) for official park information.
