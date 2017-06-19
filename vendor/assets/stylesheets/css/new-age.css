@@ -72,11 +72,11 @@ p {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
-  color: #fdcc52;
+  color: black;
 }
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-  color: #fcbd20;
+  color: #8d8741;
 }
 .navbar-default .navbar-header .navbar-toggle {
   font-size: 12px;
@@ -99,7 +99,7 @@ p {
 }
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
-  color: #fdcc52 !important;
+  color: #8d8741 !important;
   background-color: transparent;
 }
 .navbar-default .nav > li.active > a:hover,

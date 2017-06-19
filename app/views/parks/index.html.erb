@@ -9,15 +9,15 @@
               <%= form_tag('/parks', method: :get, remote: true) do  %>
               <div class='form-inline'>
                 <%= text_field_tag 'name', nil, class: "form-control input-lg", placeholder: 'Enter park name' %>
-                <%= submit_tag 'Search', class: 'btn-lg btn-primary btn-search' %>
+                <%= submit_tag 'Search', class: 'btn-lg btn-search' %>
               </div>
             <h2>Or . . . </h2>
             <h2>Choose an activity (like baseball or hiking)</h2>
               <div class='form-inline'>
                 <%= text_field_tag 'facility', nil, class: "form-control input-lg", placeholder: 'Enter activity' %>
-                <%= submit_tag 'Search', class: 'btn-lg btn-primary btn-search' %>
+                <%= submit_tag 'Search', class: 'btn-lg btn-search' %>
               </div>
-                <%= button_tag 'Clear Form', type: 'reset', class: 'btn-lg btn-info btn-reset' %>
+                <%= button_tag 'Clear Form', type: 'reset', class: 'btn-lg btn-reset' %>
               <% end %>
           </div>
         </div>

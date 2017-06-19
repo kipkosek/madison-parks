@@ -21,15 +21,11 @@
  @import 'simple-line-icons';
  // @import 'css/device-mockups';
 
- // body {
- //   color: rgb(34, 93, 81);
- //   background-color: rgb(237, 245, 225);
- // }
-//
 .btn-search {
-  margin-left: 15px;
   background-color: #35627e;
   border-color: #35627e;
+  color: white;
+  margin-top: 10px;
 }
 
 .btn-search:hover {
@@ -40,9 +36,19 @@
 .btn-reset {
   background-color: #6fa3c3;
   border-color: #6fa3c3;
+  color: white;
   margin-top: 20px;
-  display: flex;
-  justify-content: flex-start;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .btn-search {
+    margin-left: 15px;
+    margin-top: 0;
+  }
+  .btn-reset {
+    text-align: left;
+  }
 }
 
 .btn-reset:hover,
@@ -51,12 +57,7 @@
   background-color: #4b8cb4;
   border-color: #4b8cb4;
 }
-//
-//  .park-info {
-//   //  color: rgb(5, 56, 107);
-//   //  font-family: Georgia, serif;
-//  }
-//
+
 .facilities-list {
   column-count: 3;
   column-gap: normal;
@@ -65,4 +66,14 @@
   margin: 0 auto;
   max-width: 800px;
   padding: 0;
+}
+
+.facility-item > p {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .facility-item > p {
+    font-size: 18px;
+  }
 }
