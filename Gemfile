@@ -38,6 +38,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 gem 'figaro'
 gem 'font-awesome-rails'
+gem 'geocoder'
 gem 'simple-line-icons-rails'
 gem 'soda-ruby', :require => 'soda'
 

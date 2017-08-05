@@ -1,9 +1,13 @@
 require 'soda/client'
+require 'json'
 class ParksController < ApplicationController
 
   def index
     name = params[:name].split.map(&:capitalize).join(' ') unless params[:name].blank?
     facility = params[:facility].downcase unless params[:facility].blank?
+    address = params[:address] unless params[:address].blank?
+    coordinates = Geocoder.coordinates(address)
+
     park_request = ParkQuery.new
     if name
       @parks = park_request.get_park(name)
@@ -17,6 +21,8 @@ class ParksController < ApplicationController
           @error = "There was an error finding parks with that activity."
         end
       end
+    elsif address
+      @parks = park_request.get_parks_near_address(coordinates[0], coordinates[1])
     else
       @parks = []
     end
@@ -29,4 +35,5 @@ class ParksController < ApplicationController
 
   def show
   end
+
 end

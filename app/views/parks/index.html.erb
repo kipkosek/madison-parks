@@ -17,8 +17,14 @@
                 <%= text_field_tag 'facility', nil, class: "form-control input-lg", placeholder: 'Enter activity' %>
                 <%= submit_tag 'Search', class: 'btn-lg btn-search' %>
               </div>
+            <h2>Or . . .</h2>
+            <h2>Enter a street address in Madison</h2>
+              <div class='form-inline'>
+                <%= text_field_tag 'address', nil, class: "form-control input-lg", placeholder: 'Enter address' %>
+                <%= submit_tag 'Search', class: 'btn-lg btn-search' %>
+              </div>
                 <%= button_tag 'Clear Form', type: 'reset', class: 'btn-lg btn-reset' %>
-              <% end %>
+                <% end %>
           </div>
         </div>
       </div>

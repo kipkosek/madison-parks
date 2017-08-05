@@ -75,4 +75,9 @@ class ParkQuery
   def self.get_facility_name_by_display_name(value)
     FACILITY_NAMES.map {|hash| hash[:query] if hash[:display_name] == value }.compact.first
   end
+
+  def get_parks_near_address(latitude, longitude)
+    client.get("x4ks-m4xg", { :$limit => 50, "$select" => "*", "$where" => "within_circle(location, #{latitude}, #{longitude}, 1609)" })
+  end
+
 end
