@@ -18,9 +18,9 @@
 * Finally: I love Madison! And parks!
 
 ## What it does
-The app is easy to use. Users enter the name of a park or an activity (like baseball or hiking). The app returns a list of parks matching that input.
+The app is easy to use. Users enter the name of a park, an activity (like baseball or hiking), or a Madison street address. The app returns a list of parks based on that input.
 
-In the future, I plan to add an autocomplete feature to make the activities search more accurate. I will also include geolocation data that will allow address searches and display maps.
+In the future, I plan to add an autocomplete feature to make the activities search more accurate. I will also add more options to the address search.
 
 ## By the way . . .
 This is a personal project and not affiliated with the Madison city government. Please visit Madison's [Parks Division](http://www.cityofmadison.com/parks/) for official park information.
