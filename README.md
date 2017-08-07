@@ -2,7 +2,7 @@
 
 ### An app for public parks in Madison, Wisconsin. Built with Ruby on Rails, JavaScript, and open data from the City of Madison.
 
-![Screenshot_Search_Page](app/assets/images/Madison_Parks_Bootstrap_1.png)
+![Screenshot_Search_Page](app/assets/images/Madison_Parks_Address_One_Mile.png)
 
 ## Try it<br />
 #### https://madcityparks.herokuapp.com/
