@@ -58,6 +58,35 @@
   border-color: #4b8cb4;
 }
 
+.address-search-distance {
+  display: flex;
+  justify-content: center;
+}
+
+.address-search-first-part h2 {
+  margin-top: 10px;
+}
+/*need to figure out mobile display*/
+@media (min-width: 768px) {
+  .address-search-first-part {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.address-search-second-part {
+  margin-top: 0px;
+}
+
+.distance-search {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.distance-number {
+  vertical-align: middle;
+}
+
 .facilities-list {
   column-count: 3;
   column-gap: normal;

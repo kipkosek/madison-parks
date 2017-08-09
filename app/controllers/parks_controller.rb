@@ -1,5 +1,4 @@
 require 'soda/client'
-require 'json'
 class ParksController < ApplicationController
 
   def index
@@ -7,6 +6,7 @@ class ParksController < ApplicationController
     facility = params[:facility].downcase unless params[:facility].blank?
     address = params[:address] unless params[:address].blank?
     coordinates = Geocoder.coordinates(address)
+    distance = (params[:distance].to_i * 1609) unless params[:distance].blank?
 
     park_request = ParkQuery.new
     if name
@@ -22,7 +22,7 @@ class ParksController < ApplicationController
         end
       end
     elsif address
-      @parks = park_request.get_parks_near_address(coordinates[0], coordinates[1])
+      @parks = park_request.get_parks_near_address(coordinates[0], coordinates[1], distance)
     else
       @parks = []
     end
