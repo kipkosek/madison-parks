@@ -1,26 +1,35 @@
 <header>
   <div class='container'>
     <div class='row'>
-      <div class="col-sm-7">
-        <div class="header-content">
-          <div class="header-content-inner">
+      <div class='col-sm-7'>
+        <div class='header-content'>
+          <div class='header-content-inner'>
             <h1>Explore Madison's Parks!<h1>
-            <h2>Find your park by name</h2>
+            <h2>Find a park by name</h2>
               <%= form_tag('/parks', method: :get, remote: true) do  %>
               <div class='form-inline'>
-                <%= text_field_tag 'name', nil, class: "form-control input-lg", placeholder: 'Enter park name' %>
+                <%= text_field_tag 'name', nil, class: 'form-control input-lg', placeholder: 'Enter park name' %>
                 <%= submit_tag 'Search', class: 'btn-lg btn-search' %>
               </div>
             <h2>Or . . . </h2>
             <h2>Find parks with an activity (like baseball or hiking)</h2>
               <div class='form-inline'>
-                <%= text_field_tag 'facility', nil, class: "form-control input-lg", placeholder: 'Enter activity' %>
+                <%= text_field_tag 'facility', nil, class: 'form-control input-lg', placeholder: 'Enter activity' %>
                 <%= submit_tag 'Search', class: 'btn-lg btn-search' %>
               </div>
             <h2>Or . . .</h2>
-            <h2>Find parks within one mile of a Madison address</h2>
+            <div class='address-search-first-part'>
+              <h2>Find parks within</h2>
+              <div class='address-search-distance'>
+                <div class='form-inline distance-search'>
+                  <%= number_field_tag 'distance', '1', class: 'form-control input-lg distance-number', min: 1, max: 9 %>
+                </div>
+                <h2>mile(s)</h2>
+              </div>
+            </div>
+              <h2 class='address-search-second-part'>of a Madison address</h2>
               <div class='form-inline'>
-                <%= text_field_tag 'address', nil, class: "form-control input-lg", placeholder: 'Enter address' %>
+                <%= text_field_tag 'address', nil, class: 'form-control input-lg', placeholder: 'Enter address' %>
                 <%= submit_tag 'Search', class: 'btn-lg btn-search' %>
               </div>
                 <%= button_tag 'Clear Form', type: 'reset', class: 'btn-lg btn-reset' %>

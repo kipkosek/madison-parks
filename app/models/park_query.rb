@@ -53,15 +53,15 @@ class ParkQuery
   ]
 
   def initialize
-    @client ||= SODA::Client.new({ :domain => "data.cityofmadison.com" })
+    @client ||= SODA::Client.new(domain: "data.cityofmadison.com")
   end
 
   def get_park(name_search)
-    client.get("x4ks-m4xg", { :$limit => 50, "$where" => "name LIKE '%#{name_search}%'" })
+    client.get("x4ks-m4xg", :$limit => 50, "$where" => "name LIKE '%#{name_search}%'")
   end
 
   def get_parks_with_facility(facility)
-    client.get("x4ks-m4xg", { :$limit => 200, "$select" => "*", "$where" => "#{facility}=true" })
+  client.get("x4ks-m4xg", :$limit => 200, "$select" => "*", "$where" => "#{facility}=true")
   end
 
   def self.has_facility?(park, facility)
@@ -69,15 +69,15 @@ class ParkQuery
   end
 
   def self.get_facility_name_by_query(value)
-    FACILITY_NAMES.map {|hash| hash[:display_name] if hash[:query] == value }.compact.first
+    FACILITY_NAMES.map { |hash| hash[:display_name] if hash[:query] == value }.compact.first
   end
 
   def self.get_facility_name_by_display_name(value)
-    FACILITY_NAMES.map {|hash| hash[:query] if hash[:display_name] == value }.compact.first
+    FACILITY_NAMES.map { |hash| hash[:query] if hash[:display_name] == value }.compact.first
   end
 
-  def get_parks_near_address(latitude, longitude)
-    client.get("x4ks-m4xg", { :$limit => 50, "$select" => "*", "$where" => "within_circle(location, #{latitude}, #{longitude}, 1609)" })
+  def get_parks_near_address(latitude, longitude, distance)
+    client.get("x4ks-m4xg", :$limit => 50, "$select" => "*", "$where" => "within_circle(location, #{latitude}, #{longitude}, #{distance})")
   end
 
 end
